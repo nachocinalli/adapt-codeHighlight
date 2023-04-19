@@ -1,0 +1,14 @@
+{
+  "name": "adapt-codeHighlight",
+  "version": "1.0.0",
+  "framework": ">=5.17.7",
+  "homepage": "https://github.com/nachocinalli/adapt-codeHighlight",
+  "bugs": "https://github.com/nachocinalli/adapt-codeHighlight/issues",
+  "extension": "codeHighlight",
+  "displayName": "Code Highlight",
+  "description": "A simple extension for highlighting code in Adapt.",
+  "main": "/js/adapt-codeHighlight.js",
+  "keywords": ["adapt-plugin", "adapt-extension"],
+  "license": "GPL-3.0",
+  "targetAttribute": "_codeHighlight"
+}

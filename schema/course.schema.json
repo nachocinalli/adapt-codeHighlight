@@ -1,0 +1,27 @@
+{
+  "$anchor": "codeHighlight-course",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "$patch": {
+    "source": {
+      "$ref": "course"
+    },
+    "with": {
+      "properties": {  
+        "_codeHighlight": {
+          "type": "object",
+          "title": "Code highlight",
+          "default": {},
+          "properties": {
+           "_isEnabled": {
+              "type": "boolean",
+              "title": "Enable code highlight",
+              "description": "",
+              "default": true
+            }
+          }
+        }
+      }
+    }
+  }
+}
