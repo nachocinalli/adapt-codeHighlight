@@ -1,10 +1,10 @@
 {
-  "$anchor": "codeHighlight-course",
+  "$anchor": "codeHighlight-component",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "$patch": {
     "source": {
-      "$ref": "course"
+      "$ref": "component"
     },
     "with": {
       "properties": {
@@ -15,9 +15,15 @@
           "properties": {
             "_isEnabled": {
               "type": "boolean",
-              "title": "Enable code highlight",
-              "description": "",
+              "title": "Is enabled",
+              "description": "Enable code highlighting",
               "default": true
+            },
+            "_code": {
+              "type": "string",
+              "title": "Code",
+              "description": "Code to highlight",
+              "default": ""
             }
           }
         }

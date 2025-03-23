@@ -1,6 +1,27 @@
-{
-  "comment": "add to course json",
-  "_codeHighlight": {
-    "_isEnabled": true
+[
+  {
+    "comment": "add to course json",
+    "_codeHighlight": {
+      "_isEnabled": true
+    }
+  },
+  {
+    "comment": "add to blocks or components json",
+    "_codeHighlight": {
+      "_isEnabled": true,
+      "_code": {
+        "name": "adapt-codeHighlight",
+        "version": "2.0.0"
+      }
+    }
+  },
+  {
+    "comment": "add to blocks or components json",
+    "_codeHighlight": {
+      "_isEnabled": true,
+      "_code": {
+        "codehljs": "function helloWorld() {\n  console.log('Hello, world!');\n}"
+      }
+    }
   }
-}
+]
