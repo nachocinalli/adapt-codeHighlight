@@ -33,7 +33,7 @@
                             "properties": {
                                 "_isEnabled": {
                                     "type": "boolean",
-                                    "default": true,
+                                    "default": false,
                                     "title": "Enable code highlight",
                                     "inputType": "Checkbox",
                                     "help": ""
@@ -48,6 +48,14 @@
                                     },
                                     "validators": [],
                                     "help": "Enter the code to be highlighted"
+                                },
+                                "_codeFile": {
+                                    "type": "string",
+                                    "required": false,
+                                    "default": "",
+                                    "title": "Code File",
+                                    "inputType": "Asset:other",
+                                    "validators": []
                                 }
                             }
                         }
@@ -62,7 +70,7 @@
                             "properties": {
                                 "_isEnabled": {
                                     "type": "boolean",
-                                    "default": true,
+                                    "default": false,
                                     "title": "Enable code highlight",
                                     "inputType": "Checkbox",
                                     "help": ""
@@ -77,6 +85,14 @@
                                     },
                                     "validators": [],
                                     "help": "Enter the code to be highlighted"
+                                },
+                                "_codeFile": {
+                                    "type": "string",
+                                    "required": false,
+                                    "default": "",
+                                    "title": "Code File",
+                                    "inputType": "Asset:other",
+                                    "validators": []
                                 }
                             }
                         }

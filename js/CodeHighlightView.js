@@ -2,6 +2,7 @@ import { templates } from 'core/js/reactHelpers';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Adapt from 'core/js/adapt';
+
 class CodeHighlightView extends Backbone.View {
   className() {
     return 'code-highlight';
@@ -13,14 +14,31 @@ class CodeHighlightView extends Backbone.View {
 
   render() {
     ReactDOM.render(<templates.codeHighlight {...this.model.toJSON()} />, this.el);
+    if (this.model.get('_codeHighlight')._codeFile) {
+      this.listenTo(Adapt, 'codeHighlight:fileLoaded', this.onFileLoaded);
+
+      return;
+    }
     _.defer(this.postRender.bind(this));
   }
 
-  postRender() {
-    // eslint-disable-next-line no-undef
-    hljs.highlightElement(this.$('pre code')[0]);
+  onFileLoaded() {
+    const el = this.$('pre code')[0];
 
+    this.highlightElement(el);
+  }
+
+  highlightElement(el) {
+    // eslint-disable-next-line no-undef
+    hljs.highlightElement(el);
+  }
+
+  postRender() {
     this.listenTo(Adapt, 'remove', this.remove);
+
+    const el = this.$('pre code')[0];
+    if (!el) return;
+    this.highlightElement(el);
   }
 }
 
